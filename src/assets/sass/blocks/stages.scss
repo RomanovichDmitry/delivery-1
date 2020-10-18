@@ -28,16 +28,16 @@
     }
 
     &__item:nth-child(1)::before{
-        //background-image: url(../images/1.png);
+        background-image: url(../../images/1.png);
     }
     &__item:nth-child(2)::before{
-        //background-image: url(../images/2.png);
+        background-image: url(../../images/2.png);
     }
     &__item:nth-child(3)::before{
-        //background-image: url(../images/3.png);
+        background-image: url(../../images/3.png);
     }
     &__item:nth-child(4)::before{
-        //background-image: url(../images/4.png);
+        background-image: url(../../images/4.png);
     }
 
     &__title {

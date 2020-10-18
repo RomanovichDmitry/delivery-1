@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
     return (
-        <header className="header" style={{backgroundImage: "url(/images/bg.jpg)"}}>
+        <header className="header">
             <div className="header__row-bg-fixed">
                 <div className="header__row container">
                     <a href="" className="header__logo-link">

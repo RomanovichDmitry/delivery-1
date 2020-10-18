@@ -6,12 +6,4 @@ import chebureki from "./chebureki";
 import deserti from "./deserti";
 import napitki from "./napitki";
 
-export const catalogList = [
-    pizza,
-    specPizza,
-    hachapuri,
-    kalcone,
-    chebureki,
-    deserti,
-    napitki,
-];
+export const catalogList = [pizza, specPizza, hachapuri, kalcone, chebureki, deserti, napitki];

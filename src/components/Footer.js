@@ -69,6 +69,7 @@ function Footer() {
       <Cart />
       {isBasketOpen && <Basket />}
     </footer>
+    
   );
 }
 

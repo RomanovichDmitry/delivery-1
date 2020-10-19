@@ -1,5 +1,6 @@
 export default {
   name: "Кальцоне",
+  anchor: "kalcone",
   items: [
     {
       name: "Палермо",

@@ -1,5 +1,6 @@
 export default {
   name: "Напитки",
+  anchor: "napitki",
   items: [
     {
       name: "Палермо",

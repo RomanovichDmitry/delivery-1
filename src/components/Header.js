@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-scroll";
 
 function Header() {
   return (
@@ -15,39 +16,39 @@ function Header() {
                 <img src="/images/logo.png" alt="" className="header__logo-image" />
               </a>
               <li className="menu__item">
-                <a href="#pizza" className="menu__link">
+                <Link to="pizza" smooth={true} offset={-50} className="menu__link">
                   Пиццы
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#spec-pizza" className="menu__link">
+                <Link to="specPizza" smooth={true} offset={-50} className="menu__link">
                   Спецпиццы
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#hachapuri" className="menu__link">
+                <Link to="hachapuri" smooth={true} offset={-50} className="menu__link">
                   Хачапури
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#kalcone" className="menu__link">
+                <Link to="kalcone" smooth={true} offset={-50} className="menu__link">
                   Кальцоне
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#chebureki" className="menu__link">
+                <Link to="chebureki" smooth={true} offset={-50} className="menu__link">
                   Чебуреки
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#deserti" className="menu__link">
+                <Link to="deserti" smooth={true} offset={-50} className="menu__link">
                   Десерты
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a href="#napitki" className="menu__link">
+                <Link to="napitki" smooth={true} offset={-50} className="menu__link">
                   Напитки
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

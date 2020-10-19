@@ -16,20 +16,29 @@ function BasketForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch(closeBasket());
-    dispatch(cleanBasket());
-    alert(
-      `Спасибо за ваш заказ! Вы указали
-            почта: ${email},
-            телефон: ${phone},
-            коммент: ${comment},
-            имя: ${name},
-            адресс: ${address},
-            квартира: ${flat},
-            этаж: ${floor},
-            подъезд: ${entrance},
-            `
-    );
+
+    fetch("/mail.php", {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        phone,
+        comment,
+        name,
+        address,
+        flat,
+        floor,
+        entrance
+      })
+    })
+      .then(() => {
+        dispatch(closeBasket());
+        dispatch(cleanBasket());
+        alert("Спасибо за заявку!");
+      })
+      .catch((err) => console.log(err));
   }
 
   return (

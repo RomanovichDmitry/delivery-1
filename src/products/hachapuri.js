@@ -1,5 +1,6 @@
 export default {
   name: "Хачапури",
+  anchor: "hachapuri",
   items: [
     {
       name: "Палермо",

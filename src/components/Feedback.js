@@ -6,19 +6,34 @@ function Feedback() {
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
 
+  const button = React.useRef(null);
+
   function handleSubmit(event) {
     event.preventDefault();
 
     fetch("/mail.php", {
+      headers: {
+        'Content-Type': 'application/json'
+      },
       method: "POST",
-      body: `name=${name}&email=${email}&phone=${phone}&message=${message}`,
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message,
+      }),
     })
       .then(() => {
-        console.log("feedback");
-        setName(""); 
+        const btn = button.current;
+
+        setName("");
         setEmail("");
         setPhone("");
         setMessage("");
+
+        btn.classList.add("submit-btn--submit");
+        btn.textContent = "Отправлено";
+        btn.setAttribute("disabled", "disabled");
       })
       .catch((err) => console.log(err));
   }
@@ -65,7 +80,7 @@ function Feedback() {
       />
       <br />
 
-      <button type="submit" name="submit-form" className="submit-btn">
+      <button type="submit" name="submit-form" className="submit-btn" ref={button}>
         Отправить
       </button>
     </form>

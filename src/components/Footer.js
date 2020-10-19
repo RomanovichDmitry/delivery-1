@@ -2,6 +2,7 @@ import React from "react";
 import Cart from "./Cart";
 import Basket from "./Basket/Basket";
 import { useSelector } from "react-redux";
+import { Link } from "react-scroll";
 
 function Footer() {
   const isBasketOpen = useSelector((state) => state.isBasketOpen);
@@ -16,39 +17,39 @@ function Footer() {
         <nav className="menu">
           <ul className="menu__list">
             <li className="menu__item">
-              <a href="#pizza" className="menu__link">
+              <Link to="pizza" smooth={true} offset={-50} className="menu__link">
                 Пиццы
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#spec-pizza" className="menu__link">
+              <Link to="specPizza" smooth={true} offset={-50} className="menu__link">
                 Спецпиццы
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#hachapuri" className="menu__link">
+              <Link to="hachapuri" smooth={true} offset={-50} className="menu__link">
                 Хачапури
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#kalcone" className="menu__link">
+              <Link to="kalcone" smooth={true} offset={-50} className="menu__link">
                 Кальцоне
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#chebureki" className="menu__link">
+              <Link to="chebureki" smooth={true} offset={-50} className="menu__link">
                 Чебуреки
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#deserti" className="menu__link">
+              <Link to="deserti" smooth={true} offset={-50} className="menu__link">
                 Десерты
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="#napitki" className="menu__link">
+              <Link to="napitki" smooth={true} offset={-50} className="menu__link">
                 Напитки
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

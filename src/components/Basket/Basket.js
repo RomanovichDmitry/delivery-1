@@ -17,11 +17,10 @@ function Basket() {
   }
 
   return (
-    <div className="basket">
+    <div className="basket cart">
       <ul className="cart__list">
         <li className="cart__title-row">
           <h3 className="cart__title">Оформление заказа</h3>
-          <button className="cart__close" />
         </li>
 
         {basket.map((item) => (
@@ -41,7 +40,6 @@ function Basket() {
       </ul>
 
       <button className="basket-close" onClick={handleCloseBasket}>
-        закрыть
       </button>
     </div>
   );

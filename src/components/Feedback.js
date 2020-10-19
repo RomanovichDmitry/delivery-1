@@ -15,6 +15,10 @@ function Feedback() {
     })
       .then(() => {
         console.log("feedback");
+        setName(""); 
+        setEmail("");
+        setPhone("");
+        setMessage("");
       })
       .catch((err) => console.log(err));
   }

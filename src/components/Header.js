@@ -2,9 +2,41 @@ import React from "react";
 import {Link} from "react-scroll";
 
 function Header() {
+  const headerRef = React.useRef(null);
+  const headerBgRef = React.useRef(null);
+
+  let fixHeaderRow = () => {
+    const header = headerRef.current;
+    const headerBg = headerBgRef.current;
+
+    if (window.scrollY > 20) {
+      headerBg.classList.add("fixed-header");
+      header.style.paddingTop = "210px";
+      headerBg.style.background = "#393939";
+      headerBg.style.height = "89px";
+      if (document.documentElement.clientWidth < 1300) {
+        headerBg.style.height = "65px";
+        header.style.paddingTop = "180px";
+      }
+      if (document.documentElement.clientWidth < 768) {
+        headerBg.style.height = "55px";
+      }
+    } else {
+      headerBg.classList.remove("fixed-header");
+      header.style.paddingTop = "20px";
+      headerBg.style.background = "none";
+      headerBg.style.height = "inherit";
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", fixHeaderRow);
+    return () => window.removeEventListener("scroll", fixHeaderRow);
+  }, [])
+
   return (
-    <header className="header">
-      <div className="header__row-bg-fixed">
+    <header ref={headerRef} className="header">
+      <div ref={headerBgRef} className="header__row-bg-fixed">
         <div className="header__row container">
           <a href="" className="header__logo-link">
             <img src="/images/logo.png" alt="" className="header__logo-image" />

@@ -18,17 +18,12 @@ function Footer() {
           <ul className="menu__list">
             <li className="menu__item">
               <Link to="pizza" smooth={true} offset={-50} className="menu__link">
-                Пиццы
+                Пиццы и хачапури
               </Link>
             </li>
             <li className="menu__item">
               <Link to="specPizza" smooth={true} offset={-50} className="menu__link">
                 Спецпиццы
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="hachapuri" smooth={true} offset={-50} className="menu__link">
-                Хачапури
               </Link>
             </li>
             <li className="menu__item">
@@ -43,12 +38,7 @@ function Footer() {
             </li>
             <li className="menu__item">
               <Link to="deserti" smooth={true} offset={-50} className="menu__link">
-                Десерты
-              </Link>
-            </li>
-            <li className="menu__item">
-              <Link to="napitki" smooth={true} offset={-50} className="menu__link">
-                Напитки
+                Десерты и напитки
               </Link>
             </li>
           </ul>

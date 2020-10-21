@@ -4,7 +4,7 @@ export default {
   items: [
     {
       name: "Палермо",
-      img: "/images/margarita.png",
+      img: "/images/pizza/Toskana.jpg",
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
@@ -12,7 +12,7 @@ export default {
     },
     {
       name: "Маргарита",
-      img: "/images/margarita.png",
+      img: "/images/pizza/Desiliya.jpg",
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
@@ -20,7 +20,7 @@ export default {
     },
     {
       name: "Палермо",
-      img: "/images/margarita.png",
+      img: "/images/pizza/Amarena.jpg",
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
@@ -28,7 +28,7 @@ export default {
     },
     {
       name: "Маргарита",
-      img: "/images/margarita.png",
+      img: "/images/pizza/verona.jpg",
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,

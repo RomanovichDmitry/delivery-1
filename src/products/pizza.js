@@ -7,7 +7,7 @@ export default {
       img: "/images/pizza/Тоскана.jpg",
       alt: "",
       desc: "Моцарелла, курица, ветчина, пепперони, фирменный белый соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -15,15 +15,15 @@ export default {
       img: "/images/pizza/Дэлисия 1.png",
       alt: "",
       desc: "Моцарелла, пепперони, шампиньоны, маслины, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
       name: "Верона",
-      img: "/images/pizza/Верона 1.png",
+      img: "/images/pizza/фыв.jpg",
       alt: "",
       desc: "Моцарелла, курица, шапиньоны, ветчина, лучок, фирменный белый соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -31,7 +31,7 @@ export default {
       img: "/images/pizza/Сорренто 1.png",
       alt: "",
       desc: "Моцарелла, курица, ветчина, охотничьи колбаски, фирменный белый соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -39,7 +39,7 @@ export default {
       img: "/images/pizza/Венеция терияки 1.png",
       alt: "",
       desc: "Моцарелла, картошечка, курица, лучок, соус Терияки, фирменный белый соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -47,7 +47,7 @@ export default {
       img: "/images/pizza/Венеция 1.png",
       alt: "",
       desc: "Моцарелла, картошечка, курица, лучок, фирменный белый соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -55,7 +55,7 @@ export default {
       img: "/images/pizza/Маргарита 1.png",
       alt: "",
       desc: "Моцарелла, свежие томаты, свежий базилик, оливковое масало, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -63,7 +63,7 @@ export default {
       img: "/images/pizza/Паццио 1.png",
       alt: "",
       desc: "Моцарелла, бекон, лучок, курица, домашний соус Барбекю, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -71,7 +71,7 @@ export default {
       img: "/images/pizza/Пепперони 1.png",
       alt: "",
       desc: "Моцарелла, пепперони, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -79,7 +79,7 @@ export default {
       img: "/images/pizza/Карбонара 1.png",
       alt: "",
       desc: "Моцарелла, бекон, желток, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {
@@ -87,7 +87,7 @@ export default {
       img: "/images/pizza/Тиамо 1.png",
       alt: "",
       desc: "Моцарелла, ветчина, курица, пепперони,охотничьи колбаски, красный соус",
-      price: 380,
+      price: 350,
       size: [28, 30],
     },
     {

@@ -75,16 +75,16 @@
 
 @media (max-width: $desktop) {
   .header {
-    font-size: 14px;
+    font-size: 13px;
 
     &__logo-image {
-      width: 90px;
+      width: 80px;
     }
   }
 
   .menu {
     &__item {
-      margin-right: 15px;
+      margin-right: 10px;
     }
   }
 }

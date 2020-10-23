@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $order  = isset($_POST['order']) ? test_input($_POST['order']) : '';
 
   if ($name && $phone && $address && $order) {
-    $to  = "smalvad@yandex.ru";
+    $to  = "lineagecrem@mail.ru";
     $subject = "Новый заказ";
     $message = "<p>Имя: $name</p>
                 <p>Телефон: $phone</p>

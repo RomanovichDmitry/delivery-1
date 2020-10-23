@@ -20,6 +20,8 @@
     }
   }
 
+
+
   .cart__item-name {
     font-family: "Gilroy Extra Bold", serif;
     font-size: 24px;
@@ -141,6 +143,19 @@
       padding: 5px;
     }
   }
+}
+
+.cart__form-submit {
+  border: none;
+  background-color: #e83c32;
+  padding: 10px 30px;
+  font-family: "Gilroy Extra Bold";
+  border-radius: 10px;
+  display: block;
+  font-size: 1.2em;
+  margin: auto;
+  margin-top: 15px;
+  color: #fff;
 }
 
 .cart-open {

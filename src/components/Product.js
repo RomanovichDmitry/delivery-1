@@ -27,6 +27,7 @@ function Product({ product }) {
           onClick={() => setSize(28)}
         >
           28
+          <span> см</span>
         </button>
 
         <button
@@ -34,6 +35,7 @@ function Product({ product }) {
           onClick={() => setSize(30)}
         >
           30
+          <span> см</span>
         </button>
       </div>
       <button className="catalog__item-submit add_item" onClick={handleClick}>

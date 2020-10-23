@@ -8,7 +8,7 @@ export default {
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
-      size: [28, 30],
+      size: null,
     },
     {
       name: "Маргарита",
@@ -16,7 +16,7 @@ export default {
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
-      size: [28, 30],
+      size: null,
     },
     {
       name: "Палермо",
@@ -24,7 +24,7 @@ export default {
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
-      size: [28, 30],
+      size: null,
     },
     {
       name: "Маргарита",
@@ -32,7 +32,7 @@ export default {
       alt: "",
       desc: "Пицца Феличита на белом (сливочном) соусе",
       price: 500,
-      size: [28, 30],
+      size: null,
     },
   ],
 };

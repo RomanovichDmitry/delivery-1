@@ -11,29 +11,32 @@ function Feedback() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    fetch("/mail.php", {
-      headers: {
-        'Content-Type': 'application/json'
-      },
+    const data = new FormData()
+    data.append("name", name);
+    data.append("email", email);
+    data.append("phone", phone);
+    data.append("message", message);
+
+    fetch("/mail_feedback.php", {
       method: "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        message,
-      }),
+      body: data,
     })
-      .then(() => {
-        const btn = button.current;
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.success) {
+          const btn = button.current;
 
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
+          setName("");
+          setEmail("");
+          setPhone("");
+          setMessage("");
 
-        btn.classList.add("submit-btn--submit");
-        btn.textContent = "Отправлено";
-        btn.setAttribute("disabled", "disabled");
+          btn.classList.add("submit-btn--submit");
+          btn.textContent = "Отправлено";
+          btn.setAttribute("disabled", "disabled");
+        } else {
+          alert(res.message);
+        }
       })
       .catch((err) => console.log(err));
   }

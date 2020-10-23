@@ -2,9 +2,12 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { cleanBasket } from "../../redux/actions/basketActions";
 import { closeBasket } from "../../redux/actions/toggleBasketActions";
+import { useSelector } from "react-redux";
 
 function BasketForm() {
   const dispatch = useDispatch();
+  const basket = useSelector((state) => state.basket);
+
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [comment, setComment] = React.useState("");
@@ -17,26 +20,36 @@ function BasketForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    fetch("/mail.php", {
-      headers: {
-        "Content-Type": "application/json"
-      },
+    let order = "";
+    basket.forEach(({ name, amount }) => {
+      order += `${name} в количестве ${amount}. `;
+    });
+
+    const data = new FormData();
+
+    data.append("name", name);
+    data.append("email", email);
+    data.append("phone", phone);
+    data.append("comment", comment);
+    data.append("address", address);
+    data.append("flat", flat);
+    data.append("floor", floor);
+    data.append("entrance", entrance);
+    data.append("order", order);
+
+    fetch("/mail_card.php", {
       method: "POST",
-      body: JSON.stringify({
-        email,
-        phone,
-        comment,
-        name,
-        address,
-        flat,
-        floor,
-        entrance
-      })
+      body: data
     })
-      .then(() => {
-        dispatch(closeBasket());
-        dispatch(cleanBasket());
-        alert("Спасибо за заявку!");
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.success) {
+          dispatch(closeBasket());
+          dispatch(cleanBasket());
+          alert("Спасибо за заявку!");
+        } else {
+          alert(res.message);
+        }
       })
       .catch((err) => console.log(err));
   }

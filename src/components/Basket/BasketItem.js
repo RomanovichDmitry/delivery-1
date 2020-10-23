@@ -33,9 +33,12 @@ function BasketItem({ product }) {
         <div className="cart__item-description">
           <h4 className="cart__item-name">{product.name}</h4>
 
-          <p className="cart__item-size">
-            Размер: <span className="cart__item-size-sm">28</span>см
-          </p>
+          {product.size && (
+            <p className="cart__item-size">
+              Размер: <span className="cart__item-size-sm">{product.size}</span>см
+            </p>
+          )}
+
         </div>
         <div className="cart__item-count">
           <button className="cart__item-minus" disabled={amount <= 1} onClick={handleDecreaseAmount}>

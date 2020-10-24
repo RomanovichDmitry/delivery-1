@@ -72,6 +72,11 @@ function Header() {
                   Десерты и напитки
                 </Link>
               </li>
+              <li className="menu__item">
+                <Link to="dostavka" smooth={true} offset={-50} className="menu__link">
+                  Доставка
+                </Link>
+              </li>
             </ul>
           </nav>
           <p className="header__contacts">
@@ -88,10 +93,11 @@ function Header() {
         </div>
       </div>
       <div className="baner-text container">
-        <p className="baner-text__title">Меню доставки</p>
+        <p className="baner-text__title">Принимаем заказы:</p>
         <p className="baner-text__description">
-          Мы будем расширять ассортимент блюд нашего кафе. <br />В настоящее время вы можете заказать на дом следующие
-          позиции из нашего меню*.
+                Понедельник-четверг с 11:00 до 20:45, <br />
+                Пятница, суббота с 11:00 до 21:45, <br />
+                Воскресенье с 11:00 до 20:45.
         </p>
       </div>
     </header>

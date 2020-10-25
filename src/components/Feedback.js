@@ -42,7 +42,7 @@ function Feedback() {
   }
 
   return (
-    <form method="POST" id="form-footer" onSubmit={handleSubmit}>
+    <form onsubmit="ym(68659888,'reachGoal','321'); return true;" method="POST" id="form-footer" onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"

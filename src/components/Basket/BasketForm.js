@@ -55,7 +55,7 @@ function BasketForm() {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form onsubmit="ym(68659888,'reachGoal','123123'); return true;" className="form" onSubmit={handleSubmit}>
       <ul className="form__inputs">
         <li className="form__input-row">
           <label htmlFor="cart-user-mail">Укажите ваш E-mail:</label>

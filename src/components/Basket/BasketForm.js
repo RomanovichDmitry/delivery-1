@@ -21,8 +21,10 @@ function BasketForm() {
     event.preventDefault();
 
     let order = "";
-    basket.forEach(({ name, amount }) => {
-      order += `${name} в количестве ${amount}. `;
+    basket.forEach(({ name, amount, size }) => {
+      order += name;
+      if (size) order += `, размер: ${size}`;
+      order += `, количество: ${amount}.   `;
     });
 
     const data = new FormData();
@@ -39,10 +41,11 @@ function BasketForm() {
 
     fetch("/mail_card.php", {
       method: "POST",
-      body: data
+      body: data,
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log("Ответ сервера", res);
         if (res.success) {
           dispatch(closeBasket());
           dispatch(cleanBasket());

@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
 import ProductWithSize from "./ProductWithSize";
-import {Element} from "react-scroll";
+import { Element } from "react-scroll";
 
 function CatalogItem({ item }) {
   return (
@@ -12,9 +12,9 @@ function CatalogItem({ item }) {
       <ul className="catalog__list">
         {item.items.map((product, idx) => {
           if (product.size !== null) {
-            return <ProductWithSize key={idx} product={product}/>
+            return <ProductWithSize key={idx} product={product} />;
           }
-          return <Product key={idx} product={product} />
+          return <Product key={idx} product={product} />;
         })}
       </ul>
     </Element>

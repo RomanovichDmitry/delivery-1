@@ -39,7 +39,7 @@ function Basket() {
         </li>
       </ul>
 
-      <button className="basket-close" onClick={handleCloseBasket}/>
+      <button className="basket-close" onClick={handleCloseBasket} />
     </div>
   );
 }

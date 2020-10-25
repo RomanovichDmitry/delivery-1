@@ -38,7 +38,6 @@ function BasketItem({ product }) {
               Размер: <span className="cart__item-size-sm">{product.size}</span>см
             </p>
           )}
-
         </div>
         <div className="cart__item-count">
           <button className="cart__item-minus" disabled={amount <= 1} onClick={handleDecreaseAmount}>

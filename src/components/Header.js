@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-scroll";
+import { Link } from "react-scroll";
 
 function Header() {
   const headerRef = React.useRef(null);
@@ -29,10 +29,14 @@ function Header() {
     }
   };
 
+  function handleButtonClick(event) {
+    event.target.classList.toggle("menu__button--active");
+  }
+
   React.useEffect(() => {
     window.addEventListener("scroll", fixHeaderRow);
     return () => window.removeEventListener("scroll", fixHeaderRow);
-  }, [])
+  }, []);
 
   return (
     <header ref={headerRef} className="header">
@@ -42,7 +46,7 @@ function Header() {
             <img src="/images/logo.png" alt="" className="header__logo-image" />
           </a>
           <nav className="menu">
-            <button className="menu__button" />
+            <button className="menu__button" onClick={handleButtonClick} />
             <ul className="menu__list">
               <a href="" className="header__logo-link">
                 <img src="/images/logo.png" alt="" className="header__logo-image" />
@@ -95,9 +99,9 @@ function Header() {
       <div className="baner-text container">
         <p className="baner-text__title">Принимаем заказы:</p>
         <p className="baner-text__description">
-                Понедельник-четверг с 11:00 до 20:45, <br />
-                Пятница, суббота с 11:00 до 21:45, <br />
-                Воскресенье с 11:00 до 20:45.
+          Понедельник-четверг с 11:00 до 20:45, <br />
+          Пятница, суббота с 11:00 до 21:45, <br />
+          Воскресенье с 11:00 до 20:45.
         </p>
       </div>
     </header>

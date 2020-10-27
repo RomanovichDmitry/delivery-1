@@ -3,22 +3,22 @@ $result = [];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-  $name   = isset($_POST['name']) ? test_input($_POST['name']) : '';
-  $phone  = isset($_POST['phone']) ? test_input($_POST['phone']) : '';
-  $email  = isset($_POST['email']) ? test_input($_POST['email']) : 'не указан';
-  $message  = isset($_POST['message']) ? test_input($_POST['message']) : 'не указано';
-  $address  = isset($_POST['address']) ? test_input($_POST['address']) : '';
-  $flat  = isset($_POST['flat']) ? test_input($_POST['flat']) : 'не указано';
-  $floor  = isset($_POST['floor']) ? test_input($_POST['floor']) : 'не указано';
-  $entrance  = isset($_POST['entrance']) ? test_input($_POST['entrance']) : 'не указано';
-  $order  = isset($_POST['order']) ? test_input($_POST['order']) : '';
+  $name   = isset($_POST['name']) ? $_POST['name'] : '';
+  $phone  = isset($_POST['phone']) ? $_POST['phone'] : '';
+  $email  = isset($_POST['email']) ? $_POST['email'] : 'не указан';
+  $message  = isset($_POST['comment']) ? $_POST['comment'] : 'не указано';
+  $address  = isset($_POST['address']) ? $_POST['address'] : '';
+  $flat  = isset($_POST['flat']) ? $_POST['flat'] : 'не указана';
+  $floor  = isset($_POST['floor']) ? $_POST['floor'] : 'не указан';
+  $entrance  = isset($_POST['entrance']) ? $_POST['entrance'] : 'не указан';
+  $order  = isset($_POST['order']) ? $_POST['order'] : '';
 
   if ($name && $phone && $address && $order) {
-    $to  = "lineagecrem@mail.ru";
+    $to  = "encher77@mail.ru";
     $subject = "Новый заказ";
     $message = "<p>Имя: $name</p>
                 <p>Телефон: $phone</p>
-                <p>Почта: $mail</p>
+                <p>Почта: $email</p>
                 <p>Адресс: $address</p>
                 <p>Квартира: $flat</p>
                 <p>Этаж: $floor</p>
@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $result['success'] = true;
     $result['message'] = 'Успешно обработано!';
+    $result['order'] = $message;
     $result['mailStatus'] = $mail_status;
 
   } else {
@@ -50,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   response($result);
 }
-
 
 function test_input($data) {
   $data = trim($data);

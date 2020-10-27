@@ -11,7 +11,7 @@ function Feedback() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const data = new FormData()
+    const data = new FormData();
     data.append("name", name);
     data.append("email", email);
     data.append("phone", phone);
@@ -23,6 +23,7 @@ function Feedback() {
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log("Ответ сервера", res);
         if (res.success) {
           const btn = button.current;
 

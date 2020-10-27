@@ -20,8 +20,6 @@
     }
   }
 
-
-
   .cart__item-name {
     font-family: "Gilroy Extra Bold", serif;
     font-size: 24px;
@@ -215,9 +213,8 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: space-between;
 }
 
-@media (max-width:$tablet) {
+@media (max-width: $tablet) {
   .cart {
-
     .cart__item-all-price {
       margin-right: 20px;
     }
@@ -225,7 +222,6 @@ input[type="number"]::-webkit-inner-spin-button {
     .basket-close {
       right: 25px;
     }
-
 
     input {
       padding: 5px;
@@ -255,7 +251,7 @@ input[type="number"]::-webkit-inner-spin-button {
       margin-right: 15px;
     }
 
-    .cart__item-count{
+    .cart__item-count {
       margin-right: 10px;
     }
     .cart__item-name {

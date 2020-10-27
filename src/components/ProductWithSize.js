@@ -8,13 +8,15 @@ function ProductWithSize({ product }) {
   const dispatch = useDispatch();
 
   function handleClick() {
-    dispatch(addProduct({
-      ...product,
-      amount: 1,
-      id: Date.now(),
-      price: product.price[product.size.indexOf(size)],
-      size: size,
-    }));
+    dispatch(
+      addProduct({
+        ...product,
+        amount: 1,
+        id: Date.now(),
+        price: product.price[product.size.indexOf(size)],
+        size: size,
+      })
+    );
   }
 
   return (
@@ -30,7 +32,7 @@ function ProductWithSize({ product }) {
       </div>
       <div className="catalog__item-btns-size">
         {product.size.map((sz) => (
-          <ButtonSize key={sz} size={sz} setSize={setSize} active={sz === size}/>
+          <ButtonSize key={sz} size={sz} setSize={setSize} active={sz === size} />
         ))}
       </div>
       <button className="catalog__item-submit add_item" onClick={handleClick}>

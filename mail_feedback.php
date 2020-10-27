@@ -3,17 +3,17 @@ $result = [];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-  $name   = isset($_POST['name']) ? test_input($_POST['name']) : '';
-  $phone  = isset($_POST['phone']) ? test_input($_POST['phone']) : '';
-  $phone  = isset($_POST['email']) ? test_input($_POST['email']) : 'не указан';
-  $phone  = isset($_POST['message']) ? test_input($_POST['message']) : 'не указано';
+  $name   = isset($_POST['name']) ? $_POST['name'] : '';
+  $phone  = isset($_POST['phone']) ? $_POST['phone'] : '';
+  $email  = isset($_POST['email']) ? $_POST['email'] : 'не указан';
+  $message  = isset($_POST['message']) ? $_POST['message'] : '';
 
-  if ($name && $phone) {
-    $to  = "lineagecrem@mail.ru";
+  if ($name && $phone && $message) {
+    $to  = "encher77@mail.ru";
     $subject = "Отзыв с сайта";
     $message = "<p>Имя: $name</p>
                 <p>Телефон: $phone</p>
-                <p>Почта: $mail</p>
+                <p>Почта: $email</p>
                 <p>Сообщение: $message</p>";
 
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $result['success'] = true;
     $result['message'] = 'Успешно обработано!';
+    $result['feedback'] = $message;
     $result['mailStatus'] = $mail_status;
 
   } else {
@@ -40,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   response($result);
 }
-
 
 function test_input($data) {
   $data = trim($data);

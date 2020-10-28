@@ -1,5 +1,5 @@
 export default {
-  name: "Чебуреки",
+  name: "Чебуреки и вторые блюда",
   anchor: "chebureki",
   items: [
     {
@@ -24,6 +24,14 @@ export default {
       alt: "",
       desc: "Нежное тесто по старинному домашнему рецепту, сыр.",
       price: 120,
+      size: null,
+    },
+    {
+      name: "Убийца хот-догов",
+      img: "/images/pizza/killerHotDogs.jpg",
+      alt: "",
+      desc: "Колбаски состав, мясо, специи, картофель айдахо, помидоры черри, Фокачча, маринованный огурец, лист зелени",
+      price: 460,
       size: null,
     },
   ],

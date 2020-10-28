@@ -100,9 +100,7 @@ function Header() {
         <h1 class="h1-hidden">Пицца на дровах</h1>
         <p className="baner-text__title">Принимаем заказы:</p>
         <p className="baner-text__description">
-          Понедельник-четверг с 11:00 до 20:45, <br />
-          Пятница, суббота с 11:00 до 21:45, <br />
-          Воскресенье с 11:00 до 20:45.
+          Ежедневно с 11:00 до 20:45
         </p>
       </div>
     </header>

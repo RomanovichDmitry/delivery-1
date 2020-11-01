@@ -20,11 +20,14 @@ function BasketForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    let order = "";
-    basket.forEach(({ name, amount, size }) => {
+    let order ="";
+    basket.forEach(({ name, amount, size, price}) => {
       order += name;
-      if (size) order += `, размер: ${size}`;
+      if (size)
+      order += `, цена за шт: ${price} руб `;
+      order += `, размер: ${size} см `;
       order += `, количество: ${amount}.   `;
+      
     });
 
     const data = new FormData();
@@ -73,7 +76,7 @@ function BasketForm() {
         <li className="form__input-row">
           <label htmlFor="cart-user-phone">Ваш номер телефона:</label>
           <input
-            type="text"
+            type="tel"
             name="cart-user-phone"
             id="cart-user-phone"
             value={phone}

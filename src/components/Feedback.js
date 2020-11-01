@@ -67,6 +67,7 @@ function Feedback() {
       <input
         type="tel"
         name="phone"
+        id="phone-bottom"
         placeholder="Телефон"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
@@ -90,5 +91,4 @@ function Feedback() {
     </form>
   );
 }
-
 export default Feedback;

@@ -1,4 +1,5 @@
 import React from "react";
+import InputMask from "react-input-mask";
 
 function Feedback() {
   const [name, setName] = React.useState("");
@@ -10,6 +11,7 @@ function Feedback() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    window.ym(68659888, "reachGoal", "321");
 
     const data = new FormData();
     data.append("name", name);
@@ -43,7 +45,7 @@ function Feedback() {
   }
 
   return (
-    <form onsubmit="ym(68659888,'reachGoal','321'); return true;" method="POST" id="form-footer" onSubmit={handleSubmit}>
+    <form id="form-footer" onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"
@@ -64,8 +66,8 @@ function Feedback() {
       />
       <br />
 
-      <input
-        type="tel"
+      <InputMask
+        mask="+7-(999)-999-99-99"
         name="phone"
         id="phone-bottom"
         placeholder="Телефон"
@@ -73,6 +75,7 @@ function Feedback() {
         onChange={(e) => setPhone(e.target.value)}
         required
       />
+
       <br />
 
       <textarea

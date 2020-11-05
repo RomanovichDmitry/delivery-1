@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { cleanBasket } from "../../redux/actions/basketActions";
 import { closeBasket } from "../../redux/actions/toggleBasketActions";
 import { useSelector } from "react-redux";
+import InputMask from "react-input-mask";
 
 function BasketForm() {
   const dispatch = useDispatch();
@@ -20,15 +21,19 @@ function BasketForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    let order ="";
-    basket.forEach(({ name, amount, size, price}) => {
+    let totalPrice = 0;
+    let order = "";
+    basket.forEach(({ name, amount, size, price }) => {
+      totalPrice += price;
       order += name;
-      if (size)
+      if (size) {
+        order += `, размер: ${size} см `;
+      }
       order += `, цена за шт: ${price} руб `;
-      order += `, размер: ${size} см `;
-      order += `, количество: ${amount}.   `;
-      
+      order += `, количество: ${amount}.<br/>`;
     });
+
+    order += `<br/>Общая сумма: ${totalPrice} руб`;
 
     const data = new FormData();
 
@@ -61,7 +66,7 @@ function BasketForm() {
   }
 
   return (
-    <form onsubmit="ym(68659888,'reachGoal','123123'); return true;" className="form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <ul className="form__inputs">
         <li className="form__input-row">
           <label htmlFor="cart-user-mail">Укажите ваш E-mail:</label>
@@ -75,8 +80,8 @@ function BasketForm() {
         </li>
         <li className="form__input-row">
           <label htmlFor="cart-user-phone">Ваш номер телефона:</label>
-          <input
-            type="tel"
+          <InputMask
+            mask="+7-(999)-999-99-99"
             name="cart-user-phone"
             id="cart-user-phone"
             value={phone}

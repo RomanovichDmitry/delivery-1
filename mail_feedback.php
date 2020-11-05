@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $message  = isset($_POST['message']) ? $_POST['message'] : '';
 
   if ($name && $phone && $message) {
-    $to  = "lineagecrem@mail.ru";
+    $to  = "encher77@mail.ru";
     $subject = "Отзыв с сайта";
     $message = "<p>Имя: $name</p>
                 <p>Телефон: $phone</p>

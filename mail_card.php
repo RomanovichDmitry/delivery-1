@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $floor  = isset($_POST['floor']) ? $_POST['floor'] : 'не указан';
   $entrance  = isset($_POST['entrance']) ? $_POST['entrance'] : 'не указан';
   $order  = isset($_POST['order']) ? $_POST['order'] : '';
+  $allPrice = isset($_POST['allPrice']) ? $_POST['allPrice'] : '';
 
   if ($name && $phone && $address && $order) {
     $to  = "lineagecrem@mail.ru";
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <p>Этаж: $floor</p>
                 <p>Подъезд: $entrance</p>
                 <p>Сообщение: $mail</p>
-                <p>Заказ: $order</p>";
+                <p>Заказ:<br>$order</p>";
 
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
     $headers .= "From: <mail@delivery.ru>\r\n";

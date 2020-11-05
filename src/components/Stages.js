@@ -8,7 +8,7 @@ function Stages() {
         <li className="stages__item">
           <h5 className="stages__name">Оформите заказ</h5>
           <p className="stages__description">
-            Сделайте заказ на нашем сайте или по телефону. Оплата на сайте или курьеру.
+            Сделайте заказ на нашем сайте или по телефону. Оплата курьеру наличными или по карте.
           </p>
         </li>
 

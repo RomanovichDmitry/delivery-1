@@ -43,7 +43,7 @@ function Feedback() {
   }
 
   return (
-    <form method="POST" id="form-footer" onSubmit={handleSubmit}>
+    <form onsubmit="ym(68659888,'reachGoal','321'); return true;" method="POST" id="form-footer" onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"
@@ -67,6 +67,7 @@ function Feedback() {
       <input
         type="tel"
         name="phone"
+        id="phone-bottom"
         placeholder="Телефон"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
@@ -90,5 +91,4 @@ function Feedback() {
     </form>
   );
 }
-
 export default Feedback;

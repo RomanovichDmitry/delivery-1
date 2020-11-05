@@ -20,14 +20,18 @@ function BasketForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
+    let totalPrice ="";
     let order ="";
     basket.forEach(({ name, amount, size, price}) => {
       order += name;
-      if (size)
+      if (size) {
       order += `, цена за шт: ${price} руб `;
       order += `, размер: ${size} см `;
       order += `, количество: ${amount}.   `;
-      
+      order += "<br/>";
+      totalPrice += `${price}`;
+      }
+      order =+ `Общая стоимость: ${totalPrice} руб `;
     });
 
     const data = new FormData();

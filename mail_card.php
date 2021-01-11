@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $allPrice = isset($_POST['allPrice']) ? $_POST['allPrice'] : '';
 
   if ($name && $phone && $address && $order) {
-    $to  = "lineagecrem@mail.ru";
+    $to  = "encher77@mail.ru";
     $subject = "Новый заказ";
     $message = "<p>Имя: $name</p>
                 <p>Телефон: $phone</p>

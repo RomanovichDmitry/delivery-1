@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="main-footer">
       <div className="footer__row container">
-        <a href="" className="header__logo-link">
+        <a href="#" className="header__logo-link">
           <img src="/images/footerLogo.png" alt="" className="header__logo-image" />
         </a>
 
@@ -49,8 +49,7 @@ function Footer() {
           <a href="tel:+79216320626">+7 (921) 632 0 626</a>
           <p className="footer__contacts-description">
             Принимаем заказы <br />
-            Пятница, Суббота с 11 до 21.45 <br />
-            Остальные дни с 11.00 до 20.45 <br />
+            Ежедневно 11.00 до 20.45 <br />
             Внимание! Следите за нашими акциями!!!
           </p>
         </div>

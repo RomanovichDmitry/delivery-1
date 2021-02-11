@@ -20,3 +20,11 @@ li {
 .container {
   @include container;
 }
+
+.text-hidden {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0
+}

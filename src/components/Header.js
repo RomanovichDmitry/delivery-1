@@ -42,13 +42,13 @@ function Header() {
     <header ref={headerRef} className="header">
       <div ref={headerBgRef} className="header__row-bg-fixed">
         <div className="header__row container">
-          <a href="" className="header__logo-link">
+          <a href="#" className="header__logo-link">
             <img src="/images/logo.png" alt="" className="header__logo-image" />
           </a>
           <nav className="menu">
             <button className="menu__button" onClick={handleButtonClick} />
             <ul className="menu__list">
-              <a href="" className="header__logo-link">
+              <a href="#" className="header__logo-link">
                 <img src="/images/logo.png" alt="" className="header__logo-image" />
               </a>
               <li className="menu__item">
@@ -92,12 +92,13 @@ function Header() {
                 xlinkHref="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABkElEQVQ4jZ3Uz4tOURzH8ddIJDViMcyKhZRfGz8axUIzxNJGWdha2NhMsrBQivwJErtZsGbDjJnNNGEhKZYGRUPJj1GkJvpyrp7OmXvv8zzvzb33+/med/eee84ZWDi0Rwd7cQE/cAmv9cnKjmEHcRfr0/NxjOJFP+oV6boP0x3SYCjVthajuhQP4x5WFek/+WNsL5IWQnwAGxvaNuAO1hZJAyFeXR//ZwfWFNUGQvwBv+pb/jKL70W1gRC/xNealiVcxAn8LNIGqjeeq2m5gqv4UiQtVMvt3DJtv/GmqPYofotbWTaAo+natzi4jIUsP4WdxagexfHW54sOHmQ7MmcdRjBYJw4mcD2rDSf5UKFkE57hEZ5jW504GMdkVouz5CkOZ3N+DVvS/ea0/WMzyY/NithlT7Arq8e6nsJMOmJPFiN5jyN1Ymle72N/kbTzbbmpqPiMMTwsknYGm8TBIo6lH7pUpA20iYMQnsXp9BXd8LEbccVt7MbNlr75OON7EQfvcAbxx2/gU5a/ihWB+T/QQkL5i6WdbQAAAABJRU5ErkJggg=="
               />
             </svg>
-            <a href="tel:+79216320626">+7 (921) 632 0 626</a>
+            <a href="tel:+79216320626" onclick="ym(68659888,'reachGoal','headerPhone'); return true;">+7 (921) 632 0 626</a>
           </p>
         </div>
       </div>
       <div className="baner-text container">
-        <h1 className="h1-hidden">Пицца на дровах</h1>
+        <h1 className="h1-hidden">Пицца Гатчина</h1>
+        <p className="baner-text__description">Пицца на дровах</p>
         <p className="baner-text__title">Принимаем заказы:</p>
         <p className="baner-text__description">Ежедневно с 11:00 до 20:45</p>
       </div>

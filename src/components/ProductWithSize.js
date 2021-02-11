@@ -20,14 +20,15 @@ function ProductWithSize({ product }) {
   }
 
   return (
-    <li className="catalog__item">
-      <img src={product.img} alt={product.alt} className="catalog__item-img" />
+    <li itemscope="" itemtype="http://schema.org/Product" className="catalog__item">
+      <img src={product.img} alt={`Пицца ${product.name} ${product.desc}`} className="catalog__item-img" itemprop="image"/>
       <div className="catalog__item-text">
-        <h4 className="catalog__item-name item_title">{product.name}</h4>
-        <p className="catalog__item-description">{product.desc}</p>
-        <p className="catalog__item-price item_price">
-          {product.price[product.size.indexOf(size)]}
+        <h4 className="catalog__item-name item_title" itemprop="name">{product.name}</h4>
+        <p className="catalog__item-description" itemprop="description">{product.desc}</p>
+        <p itemscope="" itemtype="http://schema.org/Offer" className="catalog__item-price item_price" itemprop="offers">
+          <span itemprop="price">{product.price[product.size.indexOf(size)]}</span>
           <span className="catalog-item-currency">руб.</span>
+          <span className="text-hidden" itemprop="priceCurrency">RUB</span>
         </p>
       </div>
       <div className="catalog__item-btns-size">

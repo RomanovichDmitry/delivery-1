@@ -13,8 +13,19 @@ function Footer() {
         <a href="#" className="header__logo-link">
           <img src="/images/footerLogo.png" alt="" className="header__logo-image" />
         </a>
-
         <nav className="menu">
+          <ul className="social-menu">
+            <li className="social-menu__item">
+              <a href="https://www.instagram.com/pizzaverevo/?igshid=rg8bp6eqsmuq" className="social-menu__link">
+                <img src="/images/insta.png" className="social-link__img"/>
+              </a>
+            </li>
+            <li className="social-menu__item">
+              <a href="https://vk.com/pizza_verevo" className="social-menu__link">
+                <img src="/images/vk.png" className="social-link__img"/>
+              </a>
+            </li>
+          </ul>
           <ul className="menu__list">
             <li className="menu__item">
               <Link to="pizza" smooth={true} offset={-50} className="menu__link">

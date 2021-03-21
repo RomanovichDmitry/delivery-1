@@ -5,12 +5,29 @@
   a {
     color: #fff;
   }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .social-menu {
+      display: flex;
+      margin-bottom: 10px;
+
+      a {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 .footer__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   .footer__contacts-description {
     font-size: 12px;
@@ -35,4 +52,18 @@
   .footer__contacts-description {
     font-size: 10px;
   }
+}
+
+
+@media (max-width:640px) {
+  .main-footer{
+
+    .header__logo-link {
+      order: -1;
+    }
+    .menu {
+      order: 0;
+    }
+  }
+
 }

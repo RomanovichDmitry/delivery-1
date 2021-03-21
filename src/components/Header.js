@@ -77,6 +77,11 @@ function Header() {
                 </Link>
               </li>
               <li className="menu__item">
+                <Link to="sushi" smooth={true} offset={-50} className="menu__link">
+                  Роллы
+                </Link>
+              </li>
+              <li className="menu__item">
                 <Link to="dostavka" smooth={true} offset={-50} className="menu__link">
                   Доставка
                 </Link>

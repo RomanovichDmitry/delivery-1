@@ -57,6 +57,7 @@
 
   &__item:last-child {
     margin-right: 0;
+    display: none;
   }
 
   &__button {
@@ -101,6 +102,10 @@
     &__item {
       margin-right: 10px;
     }
+
+    &__item:last-child {
+      display: none;
+    }
   }
 }
 
@@ -125,6 +130,10 @@
     &__list {
       display: none;
     }
+    &__item:last-child {
+      display: block;
+    }
+
 
     &__button {
       position: relative;
@@ -197,6 +206,7 @@
       padding: 10px 20px;
       margin-right: 0;
       border-bottom: 1px solid #e8e8e8;
+      
     }
   }
 }

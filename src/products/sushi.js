@@ -31,7 +31,7 @@ export default {
         img: "/images/rolli/14.jpg",
         alt: "",
         desc: "Рис, краб, авокадо, тобико, японский майонез",
-        price: [370],
+        price: [460],
         size: null,
       },
       {

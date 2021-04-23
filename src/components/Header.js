@@ -53,7 +53,7 @@ function Header() {
               </a>
               <li className="menu__item">
                 <Link to="pizza" smooth={true} offset={-50} className="menu__link">
-                  Пицца и хачапури
+                  Пицца
                 </Link>
               </li>
               <li className="menu__item">
@@ -78,7 +78,7 @@ function Header() {
               </li>
               <li className="menu__item">
                 <Link to="sushi" smooth={true} offset={-50} className="menu__link">
-                  Роллы
+                  Роллы и удон
                 </Link>
               </li>
               <li className="menu__item">
